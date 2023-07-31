@@ -2,12 +2,45 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import TV from './pages/TV';
+import TVshow from './pages/TVshow'
 import reportWebVitals from './reportWebVitals';
+import SearchBar from './SearchBar';
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+} from "react-router-dom";
+import Movie from './pages/Movie';
+import SearchRow from './pages/SearchRow';
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App/>,
+  },
+  {
+    path: "/tv",
+    element: <TV/>,
+  },
+  {
+    path: "/movie/:id/:name",
+    element: <Movie/>,
+  },
+  {
+    path: "/searchbar",
+    element: <SearchBar/>,
+  },
+  {
+    path: "/tvshow/:id/:name/:season/:episode",
+    element: <TVshow/>,
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

@@ -1,0 +1,248 @@
+
+.tvmain_poster{
+    height: 500px;
+    /* position:absolute ; */
+    margin:auto;
+    width: 1200px;
+    position: relative;
+    
+    background-position: center center;
+/* background-repeat: no-repeat;
+
+background-size: cover;
+display: flex;
+flex-direction: row;  */
+}
+.tvmain_poster::before{
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.2;
+}
+
+.tvrow_postersm{
+    /* text-align: left; */
+    display:flex;
+transition: transform 1s;
+overflow-y: hidden;
+overflow-x: scroll;
+margin-top: 5px;
+margin-bottom: 5px;
+padding-inline-start: 0%;
+/* height: 500px; */
+/* padding-top: 20px; */
+}
+
+.tvrow_posterm{
+    /* position: fixed; */
+    object-fit: contain;
+    width:fit-content;
+    max-height: 100px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+/* .tvrow_postersm:hover{
+    transform: scale(1.05);
+    margin: 10px;
+    margin-left: 0%;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-inline-start: 5px;
+    padding: 5px;
+
+} */
+.tvrow_posterm:hover{
+    transform: scaleX(1.1);
+    /* margin-left: 10px;
+    margin-right: 10px; */
+    /* margin-bottom: 10px; */
+    /* padding: 5px; */
+}
+.tvrow_postersm::-webkit-scrollbar{
+    display:none;
+}
+.seasonNumber{
+    
+    overflow-y: hidden;
+overflow-x: scroll;
+    display: flex;
+    justify-content:flex-start;
+    text-decoration: none;
+    padding:20px;
+}
+/* .episodeNumber{
+    max-height: 60px;
+    object-fit: contain;
+    
+} */
+.episodeNumber{
+    
+
+     position:relative;
+     display:flex;
+     transition: transform 1s;
+     overflow-y: hidden;
+     overflow-x: scroll;
+     margin-top: 5px;
+     margin-bottom: 5px;
+     padding-inline-start: 0%;
+     /* height: 500px; */
+     /* width:fit-content; */
+     /* padding-top: 20px; */
+}
+.episodes{
+    background-position: center center;
+    /* background-repeat: no-repeat; */
+    position:relative;
+    background-size: cover;
+    object-fit: contain;
+    width:200px;
+    height: 100px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+/* .episodeNumber:hover{
+    transform: scale(1.05);
+    margin: 10px;
+    
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-inline-start: 5px;
+    padding: 5px;
+
+} */
+.episodes:hover{
+    transform: scaleX(1.1);
+    /* margin-left: 10px;
+    margin-right: 10px; */
+    /* margin-bottom: 10px; */
+    /* padding: 5px; */
+}
+.episodeNumber::-webkit-scrollbar{
+    display:none;
+}
+.seasonNumber::-webkit-scrollbar{
+    display:none;
+}
+.hover-text {
+    /* size: 30px; */
+    position: absolute;
+    width:200px;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+  }
+  .description_box{
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    background: transparent;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    
+  }
+  .description{
+    background: transparent;
+  }
+
+  .play-button {
+    width: 100px;
+    height: 40px;
+    border-radius: 10%;
+    background-color:white;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+  }
+  
+  .play-button span {
+    width: 0;
+    height: 0;
+    background: transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid rgb(0, 0, 0);
+    /* margin: 5px; */
+  }
+  
+  .play-button span:before {
+    /* content: ""; */
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    /* background-color: red; */
+    /* background-color: rgba(241, 241, 241, 0.963); */
+    background-color:white;
+
+
+    /* margin-right: 5px; */
+    /* border-radius: 1%; */
+    /* transform: translateX(-50%); */
+  }
+  .play-button p {
+    width: 30px;
+    height: 20px;
+    font-size: large;
+    /* margin: 10px; */
+    padding-right: 20px;
+
+   
+    background: transparent;
+    /* border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid white; */
+  }
+  
+  .play-button p:before {
+    content: "Play";
+    position: absolute;
+    width: 30px;
+    height: 10px;
+    padding-right: 10px;
+    color: black;
+    font-weight: bold;
+    /* background-color: red; */
+    /* background-color: rgba(241, 241, 241, 0.963); */
+    background-color:white;
+
+
+    /* padding: 2px; */
+    /* align-self: center; */
+    /* border-radius: 1%; */
+    /* transform: translateX(-50%); */
+  }
+  
+  /* @keyframes pulse {
+    0% {
+      transform: translateX(-50%) scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: translateX(-50%) scale(1.5);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(-50%) scale(1);
+      opacity: 1;
+    }
+  } */
+  .closeButton{
+    position: absolute;
+    top:0px;
+    right:0px;
+    padding:5px;
+    
+  }
+  .left-image{
+height: 40px;
+width:auto;
+  }
+  
